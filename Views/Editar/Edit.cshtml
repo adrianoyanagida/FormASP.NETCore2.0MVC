@@ -1,0 +1,54 @@
+﻿@model Formulario
+<div class="row orderForm ">
+    <h3>Preencha o formulário abaixo.</h3>
+
+    <div asp-validation-summary="All"></div>
+
+    <form asp-action="Post" method="post" class="form-horizontal" role="form">
+        <input asp-for="FormularioId" type="hidden" />
+        <div class="form-group">
+            <label asp-for="NomeDoAnimal" class="col-md-2 control-label">Nome Do Animal</label>
+            <div class="col-md-5">
+                <input asp-for="NomeDoAnimal" class="form-control" />
+                <span asp-validation-for="NomeDoAnimal" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="RacaDoAnimal" class="col-md-2 control-label">Raça Do Animal</label>
+            <div class="col-md-5">
+                <input asp-for="RacaDoAnimal" class="form-control" />
+                <span asp-validation-for="RacaDoAnimal" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="NomeDoProprietario" class="col-md-2 control-label">Nome Do Proprietario</label>
+            <div class="col-md-5">
+                <input asp-for="NomeDoProprietario" class="form-control" />
+                <span asp-validation-for="NomeDoProprietario" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Telefone" class="col-md-2 control-label">Telefone</label>
+            <div class="col-md-5">
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Descricao" class="col-md-2 control-label">Descrição</label>
+            <div class="col-md-5">
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="btn-group col-md-offset-2 col-md-8">
+                <input class="btn btn-success" type="submit" value="Enviar formulário" />
+            </div>
+        </div>
+    </form>
+</div>

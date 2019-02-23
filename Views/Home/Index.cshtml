@@ -1,0 +1,22 @@
+﻿<div>
+    <h3>Todos os formulários estão abaixo:</h3>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>Nome do Animal </th>
+            <th>Raça do Animal </th>
+            <th>Nome do Proprietario </th>
+            <th>Telefone </th>
+            <th>Descrição </th>
+        </tr>
+    </thead>
+    @{
+        foreach (Formulario formulario in Model.Formularios)
+        {
+            @Html.Partial("FormListPartial", formulario);
+        }
+    }
+</table>

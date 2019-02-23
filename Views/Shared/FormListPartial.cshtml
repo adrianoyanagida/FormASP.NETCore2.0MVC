@@ -1,0 +1,19 @@
+﻿@model Formulario
+
+<tr>
+    <td>@Model.FormularioId</td>
+    <td>@Model.NomeDoAnimal</td>
+    <td>@Model.RacaDoAnimal</td>
+    <td>@Model.NomeDoProprietario</td>
+    <td>@Model.Telefone</td>
+    <td>@Model.Descricao</td>
+    <td>
+        <a class="btn btn-success" id="cartButton" asp-controller="Home" asp-action="Delete"
+           asp-route-id="@Model.FormularioId">
+            Excluir
+        </a>
+    </td>
+    <td>
+        <a asp-controller="Editar" asp-action="Edit" asp-route-id="@Model.FormularioId">Editar</a>
+    </td>
+</tr>
